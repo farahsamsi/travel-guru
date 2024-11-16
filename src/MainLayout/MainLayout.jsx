@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Outlet } from "react-router-dom";
 import Navbar from "../Components/Navbar";
+import LeftSideHome from "./LeftSideHome";
 
 
 const MainLayout = () => {
@@ -19,11 +20,16 @@ const MainLayout = () => {
                     <Navbar></Navbar>
                 </nav>
 
-                <main>
+                <main className="grid grid-cols-1 lg:grid-cols-12 gap-2 lg:pt-[100px]">
                     {/* left side */}
+                    <section className="lg:col-span-5">
+                        <LeftSideHome />
+                    </section>
 
                     {/* right side */}
-                    <Outlet></Outlet>
+                    <section className="lg:col-span-7">
+                        <Outlet></Outlet>
+                    </section>
                 </main>
             </div>
 

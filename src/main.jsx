@@ -11,11 +11,18 @@ import MainLayout from './MainLayout/MainLayout.jsx';
 import { HelmetProvider } from 'react-helmet-async';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Carousel from './Components/Carousel.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout />,
+    children: [
+      {
+        path: '/',
+        element: <Carousel></Carousel>
+      }
+    ]
   },
 ]);
 

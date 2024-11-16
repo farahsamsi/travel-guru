@@ -9,6 +9,9 @@ export default {
       colors: {
         primary: "#F9A51A",
       },
+      fontFamily: {
+        title: "Bebas Neue",
+      },
     },
   },
   // eslint-disable-next-line no-undef
