@@ -12,6 +12,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Carousel from './Components/Carousel.jsx';
+import Booking from './Components/Booking.jsx';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Carousel></Carousel>
+      },
+      {
+        path: '/booking',
+        element: <Booking></Booking>
       }
     ]
   },

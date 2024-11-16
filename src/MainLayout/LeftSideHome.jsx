@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 
 const LeftSideHome = () => {
@@ -19,9 +20,9 @@ const LeftSideHome = () => {
                 {isExpanded ? description.description : `${description.description.split(' ').slice(0, 25).join(' ')}...`}
             </p>
 
-            <button onClick={handleReadMore} className="btn bg-primary rounded md:py-3 md:px-7 border-none">Booking
+            <Link to='/booking' onClick={handleReadMore} className="btn bg-primary rounded md:py-3 md:px-7 border-none">Booking
                 <FaArrowRightLong />
-            </button>
+            </Link>
         </div>
     );
 };
